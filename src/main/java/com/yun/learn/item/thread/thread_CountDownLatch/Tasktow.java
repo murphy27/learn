@@ -1,4 +1,4 @@
-package com.yun.learn.daytoday.thread_CountDownLatch;
+package com.yun.learn.item.thread.thread_CountDownLatch;
 
 import java.util.concurrent.CountDownLatch;
 

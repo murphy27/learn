@@ -5,6 +5,62 @@
     <title>Title</title>
 </head>
 <body>
+<template>
+    <div class="tableDate">
+        <div class="button" style="width:3%;float:right;">
+            <P><el-button class="el-icon-plus" @click.prevent="addRow()"></el-button></P>
+            <p><el-button class="el-icon-minus" @click.prevent="delData()"></el-button></p>
+        </div>
+        <div class="table">
+            <el-table
+                    :data="tableData"
+                    ref="table"
+                    tooltip-effect="dark"
+                    border
+                    stripe
+                    style="width: 95%"
+                    @selection-change='selectRow'>
+                <el-table-column type="selection" width="45" align="center"></el-table-column>
+                <el-table-column label="序号"  type="index" width="60" align="center"></el-table-column>
+                <el-table-column  label="地址" align="center">
+                    <template slot-scope="scope">
+                        <el-input v-model="scope.row.address"></el-input>
+                    </template>
+                </el-table-column>
+                <el-table-column label="男猪脚">
+                    <template slot-scope="scope">
+                        <el-input v-model="scope.row.name"></el-input>
+                    </template>
+                </el-table-column>
+                <el-table-column label="女猪脚">
+                    <template slot-scope="scope">
+                        <el-input v-model="scope.row.loveer"></el-input>
+                    </template>
+                </el-table-column>
+                <el-table-column prop="name" label="天气">
+                    <template slot-scope="scope">
+                        <el-input v-model="scope.row.weather"></el-input>
+                    </template>
+                </el-table-column>
+                <el-table-column label="电话">
+                    <template slot-scope="scope">
+                        <el-input v-model="scope.row.phone"></el-input>
+                    </template>
+                </el-table-column>
+                <el-table-column label="牵手日">
+                    <template slot-scope="scope">
+                        <el-input v-model="scope.row.date"></el-input>
+                    </template>
+                </el-table-column>
+                <el-table-column label="纪念日">
+                    <template slot-scope="scope">
+                        <el-input v-model="scope.row.mdate"></el-input>
+                    </template>
+                </el-table-column>
+            </el-table>
+        </div>
+    </div>
+</template>
 <h5>title</h5>
 </body>
 </html>

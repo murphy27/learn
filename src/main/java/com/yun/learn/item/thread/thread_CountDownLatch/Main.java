@@ -1,4 +1,4 @@
-package com.yun.learn.daytoday.thread_CyclicBarrier;
+package com.yun.learn.item.thread.thread_CountDownLatch;
 
 /**
  * @author Murphy
@@ -14,7 +14,7 @@ public class Main {
 
             }
         };
-        threadMng.checkResultService();
-        System.out.println("执行完成");
+        boolean b = threadMng.checkResultService();
+        System.out.println(b?"执行完成":"执行失败");
     }
 }

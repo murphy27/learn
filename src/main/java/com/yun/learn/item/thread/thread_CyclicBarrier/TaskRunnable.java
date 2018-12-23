@@ -1,6 +1,5 @@
-package com.yun.learn.daytoday.thread_CyclicBarrier;
+package com.yun.learn.item.thread.thread_CyclicBarrier;
 
-import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.CyclicBarrier;
 
 /**

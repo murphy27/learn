@@ -1,7 +1,6 @@
-package com.yun.learn.daytoday.thread_CyclicBarrier;
+package com.yun.learn.item.thread.thread_CountDownLatch;
 
 import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.CyclicBarrier;
 
 /**
  * @author Murphy
@@ -10,7 +9,7 @@ import java.util.concurrent.CyclicBarrier;
 public class Taskthrea extends TaskRunnable {
 
 
-    public Taskthrea(CyclicBarrier _latch) {
+    public Taskthrea(CountDownLatch _latch) {
         super(Taskthrea.class.getName(), _latch);
     }
 
