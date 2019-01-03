@@ -1,17 +1,23 @@
-package com.yun.learn.item.thread.thread_master_worker;
+package com.yun.learn.utils.threadsmasterwork;
 
 import java.util.Random;
 
-public class Client {
+/**
+ * @author Murphy
+ * @date 2019/1/2
+ */
+public class Clients {
+
+
 
     public static void main(String[] args) {
         System.out.println(Runtime.getRuntime().availableProcessors());
         //获取机器的可用线程
-        Master master = new Master(new Data(),
+        Plant plant = new Plant(new Process(),
                 Runtime.getRuntime().availableProcessors());
         //提交任务
         Random random = new Random();
-        for (int i = 1; i <= 100; i++) {
+        /*for (int i = 1; i <= 100; i++) {
             Task task = new Task();
             task.setId(i);
             task.setName("name" + i);
@@ -30,8 +36,7 @@ public class Client {
                 System.out.println("执行结果  " + result + " 执行时间   " + end);
                 break;
             }
-        }
-
+        }*/
     }
-}
 
+}

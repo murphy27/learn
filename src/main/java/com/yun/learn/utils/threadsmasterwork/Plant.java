@@ -1,11 +1,17 @@
-package com.yun.learn.item.thread.thread_master_worker;
+package com.yun.learn.utils.threadsmasterwork;
+
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
-public class Master {
+/**
+ * @author Murphy
+ * @date 2019/1/2
+ */
+public class Plant {
+
 
     // 1.应该有一个装任务的集合ConcurrentLinkedQueue
     private ConcurrentLinkedQueue<Object> workQueue = new ConcurrentLinkedQueue<Object>();
@@ -17,7 +23,7 @@ public class Master {
     private ConcurrentHashMap<String, Object> resultMap = new ConcurrentHashMap<String, Object>();
 
     // 4.要有一个构造方法
-    public Master(Worker worker, Integer workerCount) {
+    public Plant(Workers worker, Integer workerCount) {
         // 创建worker对Maset中任务队列的引用,用于任务的领取
         worker.setWorkerQueue(this.workQueue);
         // 创建worker对Maset中结果集合的引用，用于任务的提交
@@ -61,5 +67,6 @@ public class Master {
         }
         return sum;
     }
-}
 
+
+}

@@ -1,9 +1,12 @@
-package com.yun.learn.item.thread.thread_master_worker;
+package com.yun.learn.utils.threadsmasterwork;
+
+import com.yun.learn.item.thread.thread_master_worker.Data;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
-public class Worker implements Runnable {
+public class Workers implements Runnable {
+
     //定义每一个ConcurrentLinkedQueue队列去引用Master中的ConcurrentLinkedQueue
     private ConcurrentLinkedQueue<Object> workQueue;
 
@@ -37,5 +40,4 @@ public class Worker implements Runnable {
             this.resultMap.put(Integer.toString(input.hashCode()), output);
         }
     }
-
 }
