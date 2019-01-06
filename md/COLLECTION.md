@@ -23,4 +23,8 @@
           </list>
         </option>
       </component>
-#3. 
+      
+#3. http://idea.lanyus.com/  IntelliJ IDEA 注册码
+    IntelliJ IDEA 注册码 收藏下
+
+

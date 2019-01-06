@@ -52,6 +52,12 @@ public abstract class ThreadMng {
         for (TaskRunnable taskRunnable : taskRunnableList) {
             executors.execute(taskRunnable);
         }
+        int i=0;
+        while (_latch.getNumberWaiting()>0){
+            i++;
+            System.out.println("还没完成"+i);
+            Thread.sleep(1000);
+        }
         /*for (TaskRunnable taskRunnable : taskRunnableList) {
             if (!taskRunnable.is_taskUp()) {
                 System.out.println("未完成全部");
